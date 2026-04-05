@@ -17,10 +17,6 @@ body {
 }
 
 @layer utilities {
-  .font-syne {
-    font-family: var(--font-syne), system-ui, sans-serif;
-  }
-
   .gradient-text {
     background: linear-gradient(135deg, #FF3D8A 0%, #FF8CC8 50%, #C026D3 100%);
     -webkit-background-clip: text;
