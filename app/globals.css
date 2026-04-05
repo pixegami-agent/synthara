@@ -1,6 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-syne: var(--font-syne-var), system-ui, sans-serif;
+
+  --color-pink-50: #FFF0F6;
+  --color-pink-100: #FFE4F0;
+  --color-pink-200: #FFC9E3;
+  --color-pink-300: #FFA0CC;
+  --color-pink-400: #FF6BA8;
+  --color-pink-500: #FF3D8A;
+  --color-pink-600: #E8006A;
+  --color-pink-700: #C50059;
+  --color-pink-800: #A3004C;
+  --color-pink-900: #870042;
+}
 
 * {
   box-sizing: border-box;
@@ -16,30 +30,32 @@ body {
   color: #0a0a0a;
 }
 
-@layer utilities {
-  .gradient-text {
-    background: linear-gradient(135deg, #FF3D8A 0%, #FF8CC8 50%, #C026D3 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+.font-syne {
+  font-family: var(--font-syne-var), system-ui, sans-serif;
+}
 
-  .gradient-bg {
-    background: linear-gradient(135deg, #FF3D8A 0%, #FF6BA8 100%);
-  }
+.gradient-text {
+  background: linear-gradient(135deg, #FF3D8A 0%, #FF8CC8 50%, #C026D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-  .glow-pink {
-    box-shadow: 0 0 60px rgba(255, 61, 138, 0.2), 0 0 120px rgba(255, 61, 138, 0.08);
-  }
+.gradient-bg {
+  background: linear-gradient(135deg, #FF3D8A 0%, #FF6BA8 100%);
+}
 
-  .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+.glow-pink {
+  box-shadow: 0 0 60px rgba(255, 61, 138, 0.2), 0 0 120px rgba(255, 61, 138, 0.08);
+}
 
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(255, 61, 138, 0.12);
-  }
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(255, 61, 138, 0.12);
 }
 
 @keyframes float {
